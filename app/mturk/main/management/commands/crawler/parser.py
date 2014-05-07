@@ -33,13 +33,10 @@ _RX_HITS_LIST = \
         <a\s+class="capsulelink"[^>]*>\s*(?P<title>.*?)\s*</a>
         .*?
 
-        # this one is optional, it should contain a valid group id, even if the
-        # main group id isn't available
         (:?
             hitId=(?P<hit_id>.*?)(&|")
             .*?
         )?
-
         # this one is optional, because it's now always available
         (:?
             groupId=(?P<group_id>.*?)(&|")
